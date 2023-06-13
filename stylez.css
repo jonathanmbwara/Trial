@@ -1,0 +1,158 @@
+/* stylez.css */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Bubblegum Sans', cursive;
+  line-height: 1.5;
+  color: #ccc;
+  background-color: #1c1c1c;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #333;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-basis: 100%;
+}
+
+.col-lg-4 {
+  flex-basis: 33.33%;
+}
+
+.col-md-4 {
+  flex-basis: 33.33%;
+}
+
+.col-sm-6 {
+  flex-basis: 50%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.pb-3 {
+  padding-bottom: 15px;
+}
+
+.w-32 {
+  width: 100px;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff9333;
+}
+
+.hidden {
+  display: none;
+}
+
+.md-down {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md-down {
+    display: block;
+  }
+}
+
+/* Navigation */
+#siteNav {
+  background-color: #333;
+  padding: 10px;
+}
+
+#siteNav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#siteNav ul li {
+  margin-right: 10px;
+}
+
+#siteNav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+#siteNav ul li a:hover {
+  background-color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+@font-face {
+  font-family: 'Bubblegum Sans';
+  src: url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+}
