@@ -1,33 +1,36 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Payment Website</title>
-  <link rel="stylesheet" href="styles.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="stylez.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts.js"></script>
 </head>
 <body>
-  <header class=" header bg-gray">
-  <h1> Welcome to Payment Website</h1>
+  <header class="header bg-gray">
+    <h1>Welcome to Payment Website</h1>
   </header>
-  <main>
-    <!-- content goes here -->
-      <!-- Add this inside the body tag of your HTML -->
-<section id="home">
-<h2>Welcome to Our Payment Platform</h2>
-<p>We provide easy and reliable online payments for businesses and individuals.</p>
-<img src="https://source.unsplash.com/1600x900/?payment,online,service" alt="Our Payment Platform">
-</section>
-  </main>
-<nav id="siteNav">
+  <div class="container wow fadeInUp animated" style="max-height: 90vh;">
+    <div class="row align-items flex-start justify-content-center">
+      <div class="col col-lg-4 col-md-4 col-sm-6 mx-auto text-left pb-3">
+        <img src="https://img.freepik.com/premium-vector/wallet-payment-logo-design-templates_24599-592.jpg?w=2000" alt="Payment Logo" class="w-32 rounded-full mr-2" />
+        <p class="text-white font-bold text-center">Payment Solutions Made Simple.</p>
+        <button type="button" class="btn btn-primary py-2 px-4 rounded-full ml-4">Learn More</button>
+      </div>
+      <div class="hidden md-down" style="height: calc(100% - 64px);">
+        <button onclick="window.scrollTo({ scrollX: 0 })" class="bg-blue-400 py-6 hover:bg-blue-500 transition duration-400 ease-in-out" style="max-width: 100%; margin: auto; padding: 16px; border: none; outline: none; box-shadow: none;" tabindex="0">Login</button>
+        <span class="ml-4 hidden sm:block h-6 lg:inline-block text-xl font-medium text-gray-900 leading-tight focus:border-transparent" style="font-size: 1rem;">or</span>
+        <button onclick="window.scrollTo({ scrollY: 0 })" class="my-8 block w-full text-red-500 py-6 hover:text-red-500 transition duration-400 ease-in-out" style="padding: 16px; border: none; outline: none; box-shadow: none;">Sign Up</button>
+      </div>
+    </div>
+  </div>
+  <nav id="siteNav">
     <ul>
-      <li><a href="contactus.html">Contact Us</a></li>
       <li><a href="Aboutus.html">About Us</a></li>
-      <li><a href="faqs.html">FAQ's</a></li>
-      <li><a href="Home.html">Home</a></li>
-      
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="faqs.html">FAQ</a></li>
+      <li><a href="Info.html">Info</a></li>
     </ul>
   </nav>
   <footer class="footer">
