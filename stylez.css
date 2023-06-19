@@ -1,130 +1,114 @@
-/* stylez.css */
-
 /* Reset styles */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typography */
 body {
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  color: #ccc;
-  background-color: #1c1c1c;
+  color: #4d4d4d;
+  background-color: #f2f2f2;
+  overflow-anchor: none;
+  scroll-padding-top: 0px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  text-shadow: 1px 0 white, 0 1px white, 1px 1px white, -1px 0 white, 0 -1px white, 1px -1px white;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: 60ch;
+  text-indent: 0.5rem;
+}
+
+a {
+  color: #33ccff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #33ccff;
+}
+
+a:hover {
+  color: #228bff;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #33ccff;
+}
+
+button, input[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+
+button:focus, input[type="submit"]:focus {
+  outline: none;
+}
+
+button:disabled, input[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button[aria-pressed] {
+  opacity: 0;
+  cursor: default;
+}
+
+/* Layout Grid */
+.row {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
 .container {
-  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 1.5rem;
 }
 
-.header {
-  background-color: #333;
-  padding: 20px;
+.card {
+  border: 1px solid #ececec;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  background-image: linear-gradient(to bottom right, #ffffff, #f1f1f1, #e6e6e6, #ddd);
+  background-image: url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 }
-
-.header h1 {
-  font-size: 32px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 4px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col {
-  flex-basis: 100%;
-}
-
-.col-lg-4 {
-  flex-basis: 33.33%;
-}
-
-.col-md-4 {
-  flex-basis: 33.33%;
-}
-
-.col-sm-6 {
-  flex-basis: 50%;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.pb-3 {
-  padding-bottom: 15px;
-}
-
-.w-32 {
-  width: 100px;
-}
-
-.rounded-full {
-  border-radius: 50%;
-}
-
-.mr-2 {
-  margin-right: 8px;
-}
-
-.text-white {
-  color: #fff;
-}
-
-.font-bold {
-  font-weight: bold;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff6f00;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #ff9333;
-}
-
-.hidden {
-  display: none;
-}
-
-.md-down {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .md-down {
-    display: block;
-  }
-}
-
-/* Navigation */
 #siteNav {
-  background-color: #333;
+  background-color: #f2f2f2;
   padding: 10px;
 }
 
 #siteNav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
@@ -134,25 +118,11 @@ body {
 }
 
 #siteNav ul li a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 5px;
 }
 
 #siteNav ul li a:hover {
-  background-color: #555;
-}
-
-/* Footer */
-.footer {
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-}
-
-@font-face {
-  font-family: 'Bubblegum Sans';
-  src: url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+  background-color: #ddd;
 }
