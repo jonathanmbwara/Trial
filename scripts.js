@@ -62,3 +62,54 @@ const cssTransitionEffect = `
 window.requestAnimationFrame(() => {
   div.style.cssText += cssTransitionEffect;
 });
+
+// Show pop-up when Learn More button is clicked
+const learnMoreButton = document.querySelector('.btn.btn-primary');
+const popup = document.querySelector('.popup');
+const closeButton = document.querySelector('.popup-close');
+
+learnMoreButton.addEventListener('click', () => {
+  popup.style.display = 'block';
+});
+
+closeButton.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+// Add smooth scrolling to navigation links
+const navLinks = document.querySelectorAll('#siteNav a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetSection = document.querySelector(e.target.getAttribute('href'));
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Add event listener to the form submit event
+loginForm.addEventListener('submit', handleFormSubmit);
+
+function handleFormSubmit(event) {
+  event.preventDefault(); // Prevent the default form submission
+  
+  // Get the form inputs
+  var emailInput = document.getElementById("emailInput").value;
+  var passwordInput = document.getElementById("passwordInput").value;
+  var countrySelect = document.getElementById("countrySelect").value;
+  
+  // Perform form validation
+  if (!emailInput || !passwordInput || !countrySelect) {
+    alert("Please fill in all the required fields.");
+    return;
+  }
+  
+  // Submit the form data to the server (you can customize this part according to your requirements)
+  // ...
+  
+  // Clear the form inputs after submission
+  document.getElementById("emailInput").value = "";
+  document.getElementById("passwordInput").value = "";
+  document.getElementById("countrySelect").value = "";
+}
+
